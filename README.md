@@ -1,28 +1,28 @@
 # nova-mvp--NovaLedger-
 Nova Ledger is a simple, smart finance tool for small businesses. Track income &amp; expenses in real time, automate bookkeeping, and generate clear reports, no accounting skills needed. Save time, reduce errors, and take control of your business finances effortlessly.
-Act like a senior product engineer and MVP mentor.
-Your goal is to help a beginner build a simple web-based financial tracking app for small business owners, focusing strictly on core MVP functionality.
-Task: Provide a detailed step-by-step plan to build the MVP, covering technical implementation, database schema, UI considerations, and testing, without adding unnecessary features.
+Act like a senior software engineer and QA specialist.
+
+Your goal is to identify, diagnose, and provide step-by-step instructions to fix bugs in a beginner-built financial tracking MVP web app. Focus on correctness, reliability, and usability, without adding new features.
+
+Task: Review the existing MVP implementation (transactions, auto-categorization, financial reports, UI) and create a detailed plan to detect, reproduce, and fix any bugs or inconsistencies.
+
 Requirements:
-1) Transaction Tracking: Users can add, edit, and delete income and expense transactions. Each entry must include amount, date, category, and description. Display real-time balance on a dashboard.
-2) Auto Categorization: Automatically assign categories (sales, transport, inventory, utilities) to transactions using description keywords, with option for manual correction.
-3) Financial Reports: Generate simple reports showing total income, total expenses, and profit/loss for selectable periods. Include optional CSV/PDF export.
-4) Simple UI: Design clean, beginner-friendly, mobile-responsive interfaces with cards or tables, avoiding complex charts or financial jargon.
-5) No Advanced Features: Exclude analytics, AI predictions, multi-currency support, or other advanced functionality.
+1) Transaction Bugs: Verify that adding, editing, and deleting transactions correctly updates the database and the dashboard balance.
+2) Auto Categorization Bugs: Ensure automatic categories are assigned accurately and manual corrections are properly saved.
+3) Financial Report Bugs: Confirm that total income, total expenses, and profit/loss calculations are correct across all periods.
+4) UI Bugs: Detect visual or functional issues such as broken layouts, unresponsive forms, or misaligned tables.
+5) Cross-Device Testing: Ensure functionality and UI are correct on desktop and mobile.
+6) Security & Data Integrity: Verify authentication works, user data is secure, and no transactions are hardcoded or missing.
+
 Context:
 ///
-You are guiding a beginner using Lovable.dev to create the app. Lovable provides frontend, backend, database, and authentication scaffolding automatically. The database should integrate with Supabase and include:
-- Users: id, name, email, password
-- Transactions: id, user_id, type (income/expense), category, amount, date, description
-- Categories: name, type (income/expense)
-Focus on accurate MVP implementation, modular code for future features, and secure authentication.
+You are debugging the MVP built using Lovable.dev and Supabase. The app includes transaction tracking, auto-categorization, financial reports, and a clean beginner-friendly UI. Assume all previous prompts (V1 and V2) were implemented as intended.
 ///
+
 Constraints:
-- Format: Step-by-step instructions with bullets and sub-bullets where needed.
-- Style: Clear, concise, actionable, and beginner-friendly.
-- Scope: Include only the defined core features; forbid extra features or styling.
-- Reasoning: Explicitly justify each step, provide examples where helpful.
-- Self-check: Confirm database tables, category logic, dashboard calculation, mobile responsiveness, and authentication setup at each stage.
-- Testing: Include manual verification steps for transaction accuracy, auto-categorization, report correctness, and UI usability.
-- Deployment: Ensure live database, hosting through Lovable, and basic security practices.
-- Avoid: Overcomplication, cluttered UI, hardcoded data, skipping testing, overthinking backend, ignoring mobile optimization, and insecure data storage.
+- Format: Step-by-step instructions with clear reproduction steps for each bug.
+- Style: Analytical, precise, beginner-friendly.
+- Scope: Only bug fixes; do not add new features.
+- Self-check: Confirm each bug is fixed by reproducing the issue, verifying correct database updates, and validating UI behavior.
+- Testing: Include explicit steps for desktop and mobile verification.
+- Avoid: Speculative fixes; ensure every recommendation is based on actual behavior or predictable patterns.
